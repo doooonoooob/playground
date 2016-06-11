@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        img {
+            width: 800px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        .slide {
+            width: 800px;
+            height: 500px;
+            margin: 10px auto 0;
+            overflow: hidden;
+            position: relative
+        }
+
+        .slide ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+        }
+
+        .slide ul li {
+            float: left;
+            width: 800px;
+            height: 500px;
+        }
+
+        .slide ol {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            margin-left: -60px;
+        }
+
+        .slide ol li {
+            float: left;
+            width: 34px;
+            height: 8px;
+            margin: 0 5px;
+            background: #c1c1c1;
+            display: inline;
+            text-indent: -999em;
+        }
+
+        .slide ol li.on {
+            background: #48e574;
+        }
+
+        .slide .btn {
+            position: absolute;
+            display: block;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background: #666;
+            color: #fff;
+            top: 50%;
+            margin-top: -20px;
+            cursor: pointer;
+        }
+
+        .btn.prev {
+            left: 0;
+        }
+
+        .btn.next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="slide">
+    <ul>
+        <li><a href="#"><img src="img/_IMinUHfUs0.jpg" alt="第1张图片"></a></li>
+        <li><a href="#"><img src="img/-tXkzUEuheU.jpg" alt="第2张图片"></a></li>
+        <li><a href="#"><img src="img/_iVG4MsY2N0.jpg" alt="第3张图片"></a></li>
+        <li><a href="#"><img src="img/bA68bHUS9mA.jpg" alt="第4张图片"></a></li>
+        <li><a href="#"><img src="img/7dwwcdv7wc4.jpg" alt="第5张图片"></a></li>
+    </ul>
+    <ol>
+        <li class="on">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+    <span class="prev btn"> < </span>
+    <span class="next btn"> > </span>
+</div>
+<script src="//cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+<script src="carousel.js"></script>
+</body>
+</html>
